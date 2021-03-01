@@ -35,7 +35,7 @@ User.findByName = (username, result) => {
       return;
     }
 
-    // not found Customer with the name specified
+    // not found user with the name specified
     result({ kind: "not_found" }, null);
   });
 };
