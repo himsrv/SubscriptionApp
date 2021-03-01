@@ -6,6 +6,11 @@ REST service which can be used by companies that will define subscriptions plans
 npm install
 ```
 
+## Create database and tables
+```
+Use SQL Workbench to run the script.sql or you can copy the queries from script.sql and run it in Shell/CMD.
+```
+
 ### Run
 ```
 node server.js
