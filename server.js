@@ -1,6 +1,7 @@
   
 const express = require("express");
 const bodyParser = require("body-parser");
+const cors=require("cors");
 
 const app = express();
 
@@ -10,7 +11,10 @@ app.use(bodyParser.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// simple route
+//Allows AJAX requests to skip the Same-origin policy and access resources from remote hosts.
+app.use(cors);
+
+// Test route
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to the application." });
 });

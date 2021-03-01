@@ -5,7 +5,7 @@ exports.create = (req, res) => {
   // Validate request
   if (!req.params) {
     res.status(400).send({
-      message: "Content can not be empty!"
+      message: "Input can not be empty!"
     });
   }
 
@@ -29,11 +29,14 @@ exports.create = (req, res) => {
 exports.findOne = (req, res) => {
   User.findByName(req.params.username, (err, data) => {
     if (err) {
+      //not found error
       if (err.kind === "not_found") {
         res.status(404).send({
           message: `Not found User with name ${req.params.username}.`
         });
-      } else {
+      }
+      //other errors 
+      else {
         res.status(500).send({
           message: "Error retrieving User with name " + req.params.username
         });
