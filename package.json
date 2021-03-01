@@ -1,0 +1,22 @@
+{
+  "name": "subscriptionapp",
+  "version": "1.0.0",
+  "description": "App to handle subscription plans",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/himsrv/SubscriptionApp.git"
+  },
+  "author": "Himanshu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/himsrv/SubscriptionApp/issues"
+  },
+  "homepage": "https://github.com/himsrv/SubscriptionApp#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}
